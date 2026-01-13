@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Label Content="Автор работы: Никиткин Евгений Зайниддинович" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
     </Grid>
 </Window>
