@@ -7,6 +7,34 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="Автор работы: Никиткин Евгений Зайниддинович" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="65"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Автор работы: Никиткин Евгений Зайниддинович" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Grid.Row="0"/>
+
+        <Grid Grid.Row="1" Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0" Margin="5" Content="X"/>
+            <Button Grid.Row="0" Grid.Column="1" Margin="5" Content="O"/>
+            <Button Grid.Row="0" Grid.Column="2" Margin="5"/>
+        </Grid>
+
+        <Button x:Name="btnNewGame" Content="Новая игра" 
+                Grid.Row="2" 
+                HorizontalAlignment="Right" VerticalAlignment="Center" 
+                Height="30" Width="100" Margin="0,0,20,0"/>
     </Grid>
 </Window>
