@@ -13,7 +13,9 @@
             <RowDefinition Height="65"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Автор работы: Никиткин Евгений Зайниддинович" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Grid.Row="0"/>
+        <Label Content="Автор работы: Никиткин Евгений Зайниддинович" 
+               HorizontalAlignment="Center" VerticalAlignment="Center" 
+               FontSize="14" Grid.Row="0"/>
 
         <Grid Grid.Row="1" Margin="20">
             <Grid.RowDefinitions>
@@ -27,14 +29,32 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Row="0" Grid.Column="0" Margin="5" Content="X"/>
-            <Button Grid.Row="0" Grid.Column="1" Margin="5" Content="O"/>
-            <Button Grid.Row="0" Grid.Column="2" Margin="5"/>
+            <Button x:Name="btn00"  Grid.Row="0" Grid.Column="0" Margin="5" />
+            <Button x:Name="btn01" Grid.Row="0" Grid.Column="1" Margin="5" />
+            <Button x:Name="btn02" Grid.Row="0" Grid.Column="2" Margin="5"/>
+            <Button x:Name="btn10" Grid.Row="1" Grid.Column="0" Margin="5"/>
+            <Button x:Name="btn11" Grid.Row="1" Grid.Column="1" Margin="5"/>
+            <Button x:Name="btn12" Grid.Row="1" Grid.Column="2" Margin="5"/>
+            <Button x:Name="btn20" Grid.Row="2" Grid.Column="0" Margin="5"/>
+            <Button x:Name="btn21" Grid.Row="2" Grid.Column="1" Margin="5"/>
+            <Button x:Name="btn22" Grid.Row="2" Grid.Column="2" Margin="5"/>
         </Grid>
 
         <Button x:Name="btnNewGame" Content="Новая игра" 
                 Grid.Row="2" 
                 HorizontalAlignment="Right" VerticalAlignment="Center" 
                 Height="30" Width="100" Margin="0,0,20,0"/>
+
+        <Label x:Name="Status" Content="Статус" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+               FontSize="20"/>
+
+        <StackPanel x:Name="SelectLevel" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Height="43" Width="162">
+            <TextBlock Text="Уровень" Height="20"/>
+            <ComboBox x:Name="btnSelectLevel" Width="150" SelectedIndex="1">
+                <ComboBoxItem Content="Лёгкий"/>
+                <ComboBoxItem Content="Средний"/>
+                <ComboBoxItem Content="Сложный"/>
+            </ComboBox>
+        </StackPanel>
     </Grid>
 </Window>
